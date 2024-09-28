@@ -39,29 +39,34 @@
             </ul>
         </aside>
 
+
+
         <!-- Основной контент -->
         <main class="flex-1 p-6">
             <!-- Фото профиля с узорчатой рамкой -->
             <div class="mb-8 flex justify-center">
                 <div class="relative inline-block">
                     <img src="/images/1.jpg" alt="Alisher Akhmedov" class="rounded-lg w-36 h-36 object-cover">
-                    <div class="absolute inset-0 border-4 border-yellow-700 rounded-lg bg-white opacity-0">
-                        <div class="border-dashed border-4 border-yellow-600 h-full w-full rounded-lg"></div>
+                    <div class="absolute inset-0 border-4 border-yellow-400 rounded-lg border-dotted">
+                        <div class="absolute inset-0 border-2 border-yellow-600 rounded-lg"></div>
                     </div>
                 </div>
             </div>
 
-
             <!-- Секция "Обо мне" -->
-            <section id="about" class="mb-8">
+            <section id="about"
+                class="mb-8 p-4 bg-gray-700 rounded-lg shadow-lg transition-all duration-300 hover:bg-blue-600 hover:text-gray-900">
                 <h2 id="about-title" class="text-2xl font-bold">Обо мне</h2>
-                <p id="about-text" class="mt-2">Я разработчик веб-приложений с опытом создания современных,
+                <p id="about-text" class="mt-2 transition-colors duration-300">
+                    Я разработчик веб-приложений с опытом создания современных,
                     масштабируемых и безопасных решений. В этом блоге я делюсь советами и инструментами, которые
-                    помогают мне в работе и могут быть полезны другим разработчикам.</p>
+                    помогают мне в работе и могут быть полезны другим разработчикам.
+                </p>
             </section>
 
             <!-- Секция "Советы" -->
-            <section id="tips" class="mb-8">
+            <section id="tips"
+                class="mb-8 p-4 bg-gray-700 rounded-lg shadow-lg transition-all duration-300 hover:bg-blue-600 hover:text-gray-900">
                 <h2 id="tips-title" class="text-2xl font-bold">Советы</h2>
                 <ul id="tips-list" class="list-disc list-inside mt-2">
                     <!-- Список советов будет заполнен через JavaScript -->
@@ -69,7 +74,8 @@
             </section>
 
             <!-- Секция "Инструменты" -->
-            <section id="tools" class="mb-8">
+            <section id="tools"
+                class="mb-8 p-4 bg-gray-700 rounded-lg shadow-lg transition-all duration-300 hover:bg-blue-600 hover:text-gray-900">
                 <h2 id="tools-title" class="text-2xl font-bold">Инструменты</h2>
                 <ul id="tools-list" class="list-disc list-inside mt-2">
                     <!-- Список инструментов будет заполнен через JavaScript -->
@@ -77,11 +83,21 @@
             </section>
 
             <!-- Секция "Контакты" -->
-            <section id="contacts" class="mb-8">
+            <section id="contacts" class="mb-8 p-4 bg-gray-700 rounded-lg shadow-lg transition-all duration-300 hover:bg-green-600 hover:text-gray-900">
                 <h2 id="contacts-title" class="text-2xl font-bold">Контакты</h2>
                 <p id="contacts-text" class="mt-2">Свяжитесь со мной через следующие платформы:</p>
+                <div class="mt-4 flex space-x-4">
+                    <a href="https://github.com/JlexaII?tab=repositories" target="_blank" class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-600 transition duration-300">
+                        GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/alisher-akhmedov-006839227/" target="_blank" class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-600 transition duration-300">
+                        LinkedIn
+                    </a>
+                </div>
             </section>
+            
         </main>
+
     </div>
 
     <footer class="bg-gray-800 p-4 text-center">

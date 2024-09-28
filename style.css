@@ -304,25 +304,13 @@ header,
     color: #ff7e5f; /* Цвет ссылки при наведении */
 }
 
-.profile-pic-wrapper {
-    position: relative;
-    display: inline-block;
-}
-
-.border-circle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 5px solid #fff; /* Цвет рамки */
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Тень */
-    transition: all 0.3s ease; /* Плавность анимации */
-    z-index: 1;
-}
-
-.profile-pic {
-    border-radius: 50%;
-    transition: opacity 0.5s ease; /* Плавная смена изображения */
+/* Добавляем узорные стили */
+.border-dotted {
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(255, 215, 0, 0.2) 0%,
+        rgba(255, 215, 0, 0.2) 25%,
+        rgba(255, 215, 0, 0) 25%,
+        rgba(255, 215, 0, 0) 50%
+    );
 }
