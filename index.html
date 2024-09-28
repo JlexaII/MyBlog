@@ -41,10 +41,16 @@
 
         <!-- Основной контент -->
         <main class="flex-1 p-6">
-            <!-- Фото профиля -->
-            <div class="mb-8">
-                <img src="/images/1.jpg" alt="Alisher Akhmedov" class="w-36 h-36 object-cover mx-auto">
+            <!-- Фото профиля с узорчатой рамкой -->
+            <div class="mb-8 flex justify-center">
+                <div class="relative inline-block">
+                    <img src="/images/1.jpg" alt="Alisher Akhmedov" class="rounded-lg w-36 h-36 object-cover">
+                    <div class="absolute inset-0 border-4 border-yellow-700 rounded-lg bg-white opacity-0">
+                        <div class="border-dashed border-4 border-yellow-600 h-full w-full rounded-lg"></div>
+                    </div>
+                </div>
             </div>
+
 
             <!-- Секция "Обо мне" -->
             <section id="about" class="mb-8">
