@@ -144,4 +144,3 @@ function changeProfilePicture() {
 
 // Меняем фотографию каждые 3 секунды
 setInterval(changeProfilePicture, 3000);
- 
