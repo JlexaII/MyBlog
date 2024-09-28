@@ -1,0 +1,328 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #001f3f, #004080);
+    /* Темно-синий фон с градиентом */
+    color: #000;
+    /* Черный цвет текста */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+header {
+    font-family: 'UnifrakturMaguntia', sans-serif;
+    /* Применение готического шрифта */
+    font-size: 3em;
+    /* Увеличенный размер шрифта */
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    /* Градиент */
+    -webkit-background-clip: text;
+    /* Обрезка фона по тексту */
+    color: transparent;
+    /* Прозрачный цвет текста */
+    padding: 20px;
+    /* Отступы вокруг текста */
+    text-align: center;
+    /* Выравнивание текста по центру */
+    border-bottom: 2px solid lightblue;
+    /* Нижняя граница */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    /* Более глубокая тень под заголовком */
+    text-shadow:
+        1px 1px 0 rgba(255, 255, 255, 0.8),
+        /* Белая обводка */
+        1px 1px 4px rgba(0, 0, 0, 0.7);
+    /* Тень текста */
+    letter-spacing: 2px;
+    /* Увеличение расстояния между буквами */
+}
+
+
+/* Сцена для куба */
+.scene {
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    margin: auto;
+    position: relative;
+    padding: 50px;
+}
+
+/* Куб */
+.cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotateCube 15s infinite linear;
+    /* Добавляем анимацию */
+}
+
+/* Каждая сторона куба */
+.cube .face {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 2px solid #00ffcc;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15%;
+    /* Округляем углы куба на 15% */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    /* Добавляем легкую тень для объёмного эффекта */
+}
+
+.cube img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Позиции сторон куба */
+.face.front {
+    transform: rotateY(0deg) translateZ(150px);
+}
+
+.face.back {
+    transform: rotateY(180deg) translateZ(150px);
+}
+
+.face.left {
+    transform: rotateY(-90deg) translateZ(150px);
+}
+
+.face.right {
+    transform: rotateY(90deg) translateZ(150px);
+}
+
+.face.top {
+    transform: rotateX(90deg) translateZ(150px);
+}
+
+.face.bottom {
+    transform: rotateX(-90deg) translateZ(150px);
+}
+
+/* Анимация вращения куба */
+@keyframes rotateCube {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+
+
+/* Анимация для кнопок */
+.btn {
+    display: inline-block;
+    background-color: #004080;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Анимация при наведении */
+}
+
+.btn:hover {
+    background-color: #ffcc00;
+    /* Изменение фона кнопки при наведении */
+    color: #000;
+    /* Изменение цвета текста */
+    transform: translateY(-5px);
+    /* Легкое поднятие кнопки */
+}
+
+/* Контент */
+.content {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.section {
+    background: rgba(255, 255, 255, 0.9);
+    /* Полупрозрачный белый фон для секций */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    /* Плавная анимация при наведении */
+    color: #000;
+    /* Черный текст */
+}
+
+.section:hover {
+    transform: scale(1.05);
+    /* Увеличение секции при наведении */
+}
+
+h2 {
+    margin-top: 0;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    .header-image img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .header-image::before,
+    .header-image::after {
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-image img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .header-image::before,
+    .header-image::after {
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        /* Меньший размер заголовков */
+    }
+
+    p,
+    li {
+        font-size: 0.9rem;
+        /* Меньший размер шрифта для текста */
+    }
+}
+
+/* Стили для хедера */
+header {
+    background: rgba(0, 0, 0, 0.8);
+    /* Полупрозрачный чёрный фон */
+    color: #ffcc00;
+    /* Яркий цвет для текста */
+    text-align: center;
+    padding: 20px 0;
+    /* Увеличенные отступы */
+    font-size: 2rem;
+    /* Увеличенный размер текста */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Тень под хедером */
+    letter-spacing: 1px;
+    /* Небольшое увеличение расстояния между буквами */
+    text-transform: uppercase;
+    /* Все буквы заглавные для стиля */
+}
+
+/* Стили для футера */
+.footer {
+    background: #001f3f;
+    /* Тёмно-синий фон */
+    color: #ffffff;
+    /* Белый текст */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1rem;
+    margin-top: 20px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+    /* Тень над футером */
+}
+
+.footer a {
+    color: #ffcc00;
+    /* Цвет ссылок во футере */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ffffff;
+    /* Изменение цвета ссылок при наведении */
+}
+
+/* Дополнительные стили */
+header,
+.footer {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    /* Тень для текста в хедере и футере для улучшения читаемости */
+}
+
+/* Стили для сайдбара */
+.sidebar {
+    width: 250px; /* Ширина боковой панели */
+    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон */
+    padding: 20px; /* Отступы внутри сайдбара */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для сайдбара */
+    margin-right: 20px; /* Отступ между сайдбаром и контентом */
+    border-radius: 10px; /* Скругление углов */
+}
+
+.sidebar h3 {
+    margin-top: 0; /* Убираем верхний отступ */
+}
+
+.sidebar ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы */
+}
+
+.sidebar ul li {
+    margin: 10px 0; /* Отступы между элементами списка */
+}
+
+.sidebar ul li a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: #004080; /* Цвет ссылок */
+    transition: color 0.3s; /* Плавный переход цвета */
+}
+
+.sidebar ul li a:hover {
+    color: #ff7e5f; /* Цвет ссылки при наведении */
+}
+
+.profile-pic-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.border-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 5px solid #fff; /* Цвет рамки */
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Тень */
+    transition: all 0.3s ease; /* Плавность анимации */
+    z-index: 1;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    transition: opacity 0.5s ease; /* Плавная смена изображения */
+}

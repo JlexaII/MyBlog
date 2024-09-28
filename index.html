@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Developer's Blog - Alisher Akhmedov</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-900 text-white">
+    <!-- Хедер -->
+    <header class="bg-gray-800 p-5 flex items-center">
+        <h1 id="header" class="text-3xl font-bold">Developer's Blog - Alisher Akhmedov</h1>
+        <div class="ml-auto relative inline-block text-left">
+            <button id="language-button" class="bg-gray-700 text-white rounded-md px-4 py-2">
+                Язык
+            </button>
+            <div class="dropdown-content absolute hidden bg-gray-800 rounded-md shadow-lg mt-1 right-0">
+                <button id="lang-ru" class="block w-full text-left px-4 py-2 hover:bg-gray-700">Русский</button>
+                <button id="lang-en" class="block w-full text-left px-4 py-2 hover:bg-gray-700">English</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="flex">
+        <!-- Сайдбар слева -->
+        <aside class="bg-gray-800 p-6 w-64 h-screen sticky top-0">
+            <h2 id="nav-title" class="text-xl font-semibold">Навигация</h2>
+            <ul class="mt-4">
+                <li><a href="#about" id="menu-about" class="text-gray-300 hover:text-white block py-2"
+                        data-lang-en="About Me" data-lang-ru="Обо мне">Обо мне</a></li>
+                <li><a href="#tips" id="menu-tips" class="text-gray-300 hover:text-white block py-2" data-lang-en="Tips"
+                        data-lang-ru="Советы">Советы</a></li>
+                <li><a href="#tools" id="menu-tools" class="text-gray-300 hover:text-white block py-2"
+                        data-lang-en="Tools" data-lang-ru="Инструменты">Инструменты</a></li>
+                <li><a href="#contacts" id="menu-contacts" class="text-gray-300 hover:text-white block py-2"
+                        data-lang-en="Contacts" data-lang-ru="Контакты">Контакты</a></li>
+            </ul>
+        </aside>
+
+        <!-- Основной контент -->
+        <main class="flex-1 p-6">
+            <!-- Фото профиля -->
+            <div class="mb-8">
+                <img src="/images/1.jpg" alt="Alisher Akhmedov" class="w-36 h-36 object-cover mx-auto">
+            </div>
+
+            <!-- Секция "Обо мне" -->
+            <section id="about" class="mb-8">
+                <h2 id="about-title" class="text-2xl font-bold">Обо мне</h2>
+                <p id="about-text" class="mt-2">Я разработчик веб-приложений с опытом создания современных,
+                    масштабируемых и безопасных решений. В этом блоге я делюсь советами и инструментами, которые
+                    помогают мне в работе и могут быть полезны другим разработчикам.</p>
+            </section>
+
+            <!-- Секция "Советы" -->
+            <section id="tips" class="mb-8">
+                <h2 id="tips-title" class="text-2xl font-bold">Советы</h2>
+                <ul id="tips-list" class="list-disc list-inside mt-2">
+                    <!-- Список советов будет заполнен через JavaScript -->
+                </ul>
+            </section>
+
+            <!-- Секция "Инструменты" -->
+            <section id="tools" class="mb-8">
+                <h2 id="tools-title" class="text-2xl font-bold">Инструменты</h2>
+                <ul id="tools-list" class="list-disc list-inside mt-2">
+                    <!-- Список инструментов будет заполнен через JavaScript -->
+                </ul>
+            </section>
+
+            <!-- Секция "Контакты" -->
+            <section id="contacts" class="mb-8">
+                <h2 id="contacts-title" class="text-2xl font-bold">Контакты</h2>
+                <p id="contacts-text" class="mt-2">Свяжитесь со мной через следующие платформы:</p>
+            </section>
+        </main>
+    </div>
+
+    <footer class="bg-gray-800 p-4 text-center">
+        <p id="footer-text">© 2024 Alisher Akhmedov. Все права защищены.</p>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>
