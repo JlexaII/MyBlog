@@ -161,8 +161,18 @@ setInterval(changeProfilePicture, 3000);
 
 
 var submitted = false;
-function onFormSubmit() {
+
+function onFormLoad() {
     if (submitted) {
         alert("Спасибо за подписку!");
+        submitted = false; // сброс переменной после отправки
     }
 }
+
+// Функция для отслеживания события отправки формы
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function () {
+        submitted = true; // Устанавливаем флаг при отправке формы
+    });
+});

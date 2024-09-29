@@ -107,18 +107,15 @@
                     рассылку прямо сейчас.</p>
                 <form
                     action="https://docs.google.com/forms/d/e/1FAIpQLSemvcefSHg-C9jNnyOLAQ21Ixqnrz5UOYJEa1vCGcqSIYm2XA/formResponse"
-                    method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="flex">
+                    method="POST" target="hidden_iframe" class="flex">
                     <input type="email" name="entry.2023071563" class="p-2 rounded-l-lg w-full text-gray-900"
                         placeholder="Ваш email">
                     <button id="subscribe-button" type="submit"
                         class="bg-yellow-500 text-black px-4 rounded-r-lg">Подписаться</button>
                 </form>
-
                 <!-- Скрытый iframe для предотвращения редиректа -->
                 <iframe name="hidden_iframe" style="display:none;" onload="onFormLoad();"></iframe>
-
             </section>
-
 
         </main>
 
