@@ -139,7 +139,7 @@ function changeProfilePicture() {
     const profilePic = document.querySelector('img[alt="Alisher Akhmedov"]'); // Получаем изображение
     currentIndex = (currentIndex % totalImages) + 1; // Увеличиваем индекс, возвращаясь к 1 после 6
 
-    profilePic.src = `/images/${currentIndex}.jpg`; // Меняем src на новое изображение
+    profilePic.src = `https://jlexaii.github.io/MyBlog//images/${currentIndex}.jpg`; // Меняем src на новое изображение
 }
 
 // Меняем фотографию каждые 3 секунды
