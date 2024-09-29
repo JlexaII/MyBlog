@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="page-title">Developer's Blog - Alisher Akhmedov</title>
-    <link rel="icon" href="https://jlexaii.github.io/MyBlog//favicon.ico" type="image/x-icon"> <!-- Путь к вашему фавикону -->
+    <link rel="icon" href="https://jlexaii.github.io/MyBlog//favicon.ico" type="image/x-icon">
+    <!-- Путь к вашему фавикону -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
@@ -41,11 +42,12 @@
         </aside>
 
         <!-- Основной контент -->
-        <main class="flex-1 p-6"> 
+        <main class="flex-1 p-6">
             <!-- Фото профиля с узорчатой рамкой -->
             <div class="mb-8 flex justify-center">
                 <div class="relative inline-block">
-                    <img src="https://jlexaii.github.io/MyBlog//images/1.jpg" alt="Alisher Akhmedov" class="rounded-lg w-36 h-36 object-cover">
+                    <img src="https://jlexaii.github.io/MyBlog//images/1.jpg" alt="Alisher Akhmedov"
+                        class="rounded-lg w-36 h-36 object-cover">
                     <div class="absolute inset-0 border-4 border-yellow-400 rounded-lg border-dotted">
                         <div class="absolute inset-0 border-2 border-yellow-600 rounded-lg"></div>
                     </div>
@@ -82,19 +84,34 @@
             </section>
 
             <!-- Секция "Контакты" -->
-            <section id="contacts" class="mb-8 p-4 bg-gray-700 rounded-lg shadow-lg transition-all duration-300 hover:bg-green-600 hover:text-gray-900">
+            <section id="contacts"
+                class="mb-8 p-4 bg-gray-700 rounded-lg shadow-lg transition-all duration-300 hover:bg-green-600 hover:text-gray-900">
                 <h2 id="contacts-title" class="text-2xl font-bold">Контакты</h2>
                 <p id="contacts-text" class="mt-2">Свяжитесь со мной через следующие платформы:</p>
                 <div class="mt-4 flex space-x-4">
-                    <a href="https://github.com/JlexaII?tab=repositories" target="_blank" class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-600 transition duration-300">
+                    <a href="https://github.com/JlexaII?tab=repositories" target="_blank"
+                        class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-600 transition duration-300">
                         GitHub
                     </a>
-                    <a href="https://www.linkedin.com/in/alisher-akhmedov-006839227/" target="_blank" class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-600 transition duration-300">
+                    <a href="https://www.linkedin.com/in/alisher-akhmedov-006839227/" target="_blank"
+                        class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-600 transition duration-300">
                         LinkedIn
                     </a>
                 </div>
             </section>
-            
+
+            <section
+                class="bg-blue-600 text-white p-6 rounded-lg shadow-lg mb-8 transition duration-300 hover:bg-blue-800">
+                <h2 class="text-2xl font-bold mb-4">Подпишитесь на обновления!</h2>
+                <p class="mb-4">Будьте в курсе последних новостей и статей, подписывайтесь на рассылку прямо сейчас.</p>
+                <form action="/subscribe" method="POST" class="flex">
+                    <input type="email" name="email" class="p-2 rounded-l-lg w-full text-gray-900"
+                        placeholder="Ваш email">
+                    <button type="submit" class="bg-yellow-500 text-black px-4 rounded-r-lg">Подписаться</button>
+                </form>
+            </section>
+
+
         </main>
 
     </div>

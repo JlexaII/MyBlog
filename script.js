@@ -2,7 +2,9 @@ const texts = {
     ru: {
         title: "Блог разработчика - Алишер Ахмедов",
         header: "Блог разработчика - Алишер Ахмедов",
-
+        subscribeTitle: "Подпишитесь на обновления!",
+        subscribeText: "Будьте в курсе последних новостей и статей, подписывайтесь на рассылку прямо сейчас.",
+        subscribeButton: "Подписаться",
         navTitle: "Навигация",
         aboutTitle: "Обо мне",
         aboutText: "Я разработчик веб-приложений с опытом создания современных, масштабируемых и безопасных решений. В этом блоге я делюсь советами и инструментами, которые помогают мне в работе и могут быть полезны другим разработчикам.",
@@ -28,6 +30,9 @@ const texts = {
     en: {
         title: "Developer's Blog - Alisher Akhmedov",
         header: "Developer's Blog - Alisher Akhmedov",
+        subscribeTitle: "Subscribe to Updates!",
+        subscribeText: "Stay updated with the latest news and articles. Subscribe to our newsletter now.",
+        subscribeButton: "Subscribe",
         navTitle: "Navigation",
         aboutTitle: "About Me",
         aboutText: "I am a web application developer with experience in creating modern, scalable, and secure solutions. In this blog, I share tips and tools that help me in my work and can be useful for other developers.",
@@ -69,6 +74,11 @@ document.querySelectorAll('.dropdown-content button').forEach(button => {
 // Функция смены языка
 function changeLanguage(lang) {
     const textData = texts[lang];
+
+    // Обновление заголовков и текста подписки
+    document.querySelector('section h2').innerText = textData.subscribeTitle;
+    document.querySelector('section p').innerText = textData.subscribeText;
+    document.querySelector('section button').innerText = textData.subscribeButton;
 
     document.getElementById('page-title').innerText = textData.title;
     document.getElementById('header').innerText = textData.header;
