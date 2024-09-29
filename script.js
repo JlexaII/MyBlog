@@ -82,6 +82,10 @@ function changeLanguage(lang) {
     document.getElementById('menu-tools').innerText = textData.toolsTitle;
     document.getElementById('menu-contacts').innerText = textData.contactsTitle;
 
+    // Отладка заголовка "Советы"
+    console.log("Изменение заголовка 'Советы' на:", textData.tipsTitle);
+    document.getElementById('tips-title').innerText = textData.tipsTitle;
+
     // Обновление списка советов
     const tipsList = document.getElementById('tips-list');
     tipsList.innerHTML = ''; // Очищаем текущий список
