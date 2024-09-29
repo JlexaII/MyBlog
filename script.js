@@ -54,7 +54,7 @@ const texts = {
 
 // Инициализация текста при первой загрузке
 window.addEventListener('DOMContentLoaded', () => {
-    changeLanguage('ru'); // Устанавливаем язык по умолчанию
+    changeLanguage('en'); // Устанавливаем язык по умолчанию
 });
 
 // Обработчики для кнопок выбора языка
