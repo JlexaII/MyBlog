@@ -158,3 +158,11 @@ function changeProfilePicture() {
 
 // Меняем фотографию каждые 3 секунды
 setInterval(changeProfilePicture, 3000);
+
+
+var submitted = false;
+function onFormSubmit() {
+    if (submitted) {
+        alert("Спасибо за подписку!");
+    }
+}
