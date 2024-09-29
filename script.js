@@ -159,7 +159,7 @@ function changeProfilePicture() {
 // Меняем фотографию каждые 3 секунды
 setInterval(changeProfilePicture, 3000);
 
-
+// Это часть кода для вызова сообщения после подписки пользователя
 var submitted = false;
 
 function onFormLoad() {
