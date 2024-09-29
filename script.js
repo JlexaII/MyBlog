@@ -75,16 +75,16 @@ document.querySelectorAll('.dropdown-content button').forEach(button => {
 function changeLanguage(lang) {
     const textData = texts[lang];
 
-    // Обновление заголовков и текста подписки
-    document.getElementById('subscribe-title').innerText = textData.subscribeTitle;
-    document.getElementById('subscribe-text').innerText = textData.subscribeText;
-    document.getElementById('subscribe-button').innerText = textData.subscribeButton;
-
     document.getElementById('page-title').innerText = textData.title;
     document.getElementById('header').innerText = textData.header;
     document.getElementById('nav-title').innerText = textData.navTitle;
     document.getElementById('about-title').innerText = textData.aboutTitle;
     document.getElementById('about-text').innerText = textData.aboutText;
+
+    // Обновление заголовков и текста подписки
+    document.getElementById('subscribe-title').innerText = textData.subscribeTitle;
+    document.getElementById('subscribe-text').innerText = textData.subscribeText;
+    document.getElementById('subscribe-button').innerText = textData.subscribeButton;
 
     // Обновление пунктов меню в сайдбаре
     document.getElementById('menu-about').innerText = textData.aboutTitle;
