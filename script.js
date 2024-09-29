@@ -76,9 +76,9 @@ function changeLanguage(lang) {
     const textData = texts[lang];
 
     // Обновление заголовков и текста подписки
-    document.querySelector('section h2').innerText = textData.subscribeTitle;
-    document.querySelector('section p').innerText = textData.subscribeText;
-    document.querySelector('section button').innerText = textData.subscribeButton;
+    document.querySelector('subscribe-title').innerText = textData.subscribeTitle;
+    document.querySelector('subscribe-text').innerText = textData.subscribeText;
+    document.querySelector('subscribe-button').innerText = textData.subscribeButton;
 
     document.getElementById('page-title').innerText = textData.title;
     document.getElementById('header').innerText = textData.header;
