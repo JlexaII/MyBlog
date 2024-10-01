@@ -159,6 +159,22 @@ function changeProfilePicture() {
 // Меняем фотографию каждые 3 секунды
 setInterval(changeProfilePicture, 3000);
 
+const totalImagesSecondBlock = 16; // Общее количество изображений во втором блоке (11.png - 26.png)
+let currentIndexSecondBlock = 11; // Начинаем с 11.png
+
+// Функция для смены фотографии во втором блоке
+function changeProfilePictureSecondBlock() {
+    const profilePicSecondBlock = document.querySelector('img[alt="Another Image"]'); // Получаем второе изображение
+    currentIndexSecondBlock = (currentIndexSecondBlock % totalImagesSecondBlock) + 11; // Увеличиваем индекс, возвращаясь к 11 после 26
+
+    profilePicSecondBlock.src = `https://jlexaii.github.io/MyBlog/images/${currentIndexSecondBlock}.png`; // Меняем src на новое изображение
+}
+
+// Меняем фотографию каждые 3 секунды для второго блока
+setInterval(changeProfilePictureSecondBlock, 3000);
+
+
+
 // Это часть кода для вызова сообщения после подписки пользователя
 var submitted = false;
 
