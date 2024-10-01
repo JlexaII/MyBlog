@@ -56,10 +56,11 @@
 
             <!-- Второй блок с фотографией -->
             <div class="mb-8 flex justify-center">
-                <div class="relative inline-block w-36 h-36 overflow-hidden bg-green-50 rounded-lg">
+                <div class="relative inline-block w-36 h-36 overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-r from-purple-500 to-green-500 animate-bg"></div>
                     <img src="https://jlexaii.github.io/MyBlog/images/11.png" alt="Another Image"
-                        class="rounded-lg w-full h-full object-cover">
-                    <div class="absolute inset-0 border-4 border-yellow-400 rounded-lg border-dotted">
+                        class="rounded-lg w-full h-full object-cover relative z-10">
+                    <div class="absolute inset-0 border-4 border-yellow-400 rounded-lg border-dotted z-20">
                         <div class="absolute inset-0 border-2 border-yellow-600 rounded-lg"></div>
                     </div>
                 </div>
@@ -142,3 +143,24 @@
 </body>
 
 </html>
+
+<style>
+    @keyframes gradient-animation {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .animate-bg {
+        background-size: 400% 400%;
+        animation: gradient-animation 10s ease infinite;
+    }
+</style>
