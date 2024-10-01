@@ -43,11 +43,11 @@
 
         <!-- Основной контент -->
         <main class="flex-1 p-6">
-            <!-- Фото профиля с узорчатой рамкой -->
+            <!-- Контейнер для фото профиля с узорчатой рамкой -->
             <div class="mb-8 flex justify-center">
-                <div class="relative inline-block">
-                    <img src="https://jlexaii.github.io/MyBlog//images/1.jpg" alt="Alisher Akhmedov"
-                        class="rounded-lg w-36 h-36 object-cover">
+                <div class="relative inline-block w-36 h-36 overflow-hidden">
+                    <img src="https://jlexaii.github.io/MyBlog/images/1.jpg" alt="Alisher Akhmedov"
+                        class="rounded-lg w-full h-full object-cover">
                     <div class="absolute inset-0 border-4 border-yellow-400 rounded-lg border-dotted">
                         <div class="absolute inset-0 border-2 border-yellow-600 rounded-lg"></div>
                     </div>
@@ -55,13 +55,16 @@
             </div>
 
             <!-- Второй блок с фотографией -->
-            <div class="relative inline-block">
-                <img src="https://jlexaii.github.io/MyBlog/images/11.png" alt="Another Image"
-                    class="rounded-lg w-36 h-36 object-cover">
-                <div class="absolute inset-0 border-4 border-yellow-400 rounded-lg border-dotted">
-                    <div class="absolute inset-0 border-2 border-yellow-600 rounded-lg"></div>
+            <div class="mb-8 flex justify-center">
+                <div class="relative inline-block w-36 h-36 overflow-hidden">
+                    <img src="https://jlexaii.github.io/MyBlog/images/11.png" alt="Another Image"
+                        class="rounded-lg w-full h-full object-cover">
+                    <div class="absolute inset-0 border-4 border-yellow-400 rounded-lg border-dotted">
+                        <div class="absolute inset-0 border-2 border-yellow-600 rounded-lg"></div>
+                    </div>
                 </div>
             </div>
+
 
             <!-- Секция "Обо мне" -->
             <section id="about"
