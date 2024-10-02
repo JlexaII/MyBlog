@@ -9,6 +9,13 @@ const texts = {
         aboutTitle: "Обо мне",
         aboutText: "Я разработчик веб-приложений с опытом создания современных, масштабируемых и безопасных решений. В этом блоге я делюсь советами и инструментами, которые помогают мне в работе и могут быть полезны другим разработчикам.",
         tipsTitle: "Советы",
+        goodbyetext: "До встречи!",
+        closeText: "Сайт закрывается...",
+        btnCloseSite: "Закрыть сайт",
+        returnText: "Вернуться",
+        myContactText: "Мои контакты",
+        telefonText: "Телефон",
+        btnCloseModal: "Закрыть",
         tipsList: [
             "Держите код чистым — используйте линтеры и следуйте принципам SOLID для улучшения качества и поддерживаемости кода.",
             "Тестирование — пишите юнит-тесты для критических частей приложения и используйте инструменты для автоматизированного тестирования.",
@@ -37,6 +44,13 @@ const texts = {
         aboutTitle: "About Me",
         aboutText: "I am a web application developer with experience in creating modern, scalable, and secure solutions. In this blog, I share tips and tools that help me in my work and can be useful for other developers.",
         tipsTitle: "Tips",
+        goodbyetext: "Goodbye!",
+        closeText: "The site is closing...",
+        btnCloseSite: "Close the site",
+        returnText: "Return",
+        myContactText: "My Contacts",
+        telefonText: "Phone",
+        btnCloseModal: "Close",
         tipsList: [
             "Keep your code clean — Use linters and follow SOLID principles for better code quality and maintainability.",
             "Testing — Write unit tests for critical parts of the application and use tools for automated testing.",
@@ -80,6 +94,17 @@ function changeLanguage(lang) {
     document.getElementById('nav-title').innerText = textData.navTitle;
     document.getElementById('about-title').innerText = textData.aboutTitle;
     document.getElementById('about-text').innerText = textData.aboutText;
+
+    // Обновляем текст в модальном окне "Прощание"
+    document.getElementById('goodbye-text').innerText = textData.goodbyetext;
+    document.getElementById('close-text').innerText = textData.closeText;
+    document.getElementById('btn-text').innerText = textData.btnCloseSite;
+    document.getElementById('return-text').innerText = textData.returnText;
+
+    // Обновляем текст в модальном окне "Контакты"
+    document.getElementById('mycontact-text').innerText = textData.myContactText;
+    document.getElementById('telefon-text').innerText = `${textData.telefonText}: +998333606028`;
+    document.getElementById('btnclose-text').innerText = textData.btnCloseModal;
 
     // Обновление заголовков и текста подписки
     document.getElementById('subscribe-title').innerText = textData.subscribeTitle;

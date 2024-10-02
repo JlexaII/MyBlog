@@ -96,15 +96,15 @@
                 <div id="goodbyeModal"
                     class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                     <div class="bg-white p-8 rounded-lg shadow-lg text-center">
-                        <h2 class="text-xl font-bold mb-4">Прощай!</h2>
+                        <h2 id="goodbye-text" class="text-xl font-bold mb-4">До встречи!</h2>
                         <img src="https://jlexaii.github.io/MyBlog/images/goodbye.gif" alt="Goodbye Image"
                             class="w-full mb-4">
-                        <p>Сайт закрывается...</p>
-                        <button onclick="closeSite()" class="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg">Закрыть
+                        <p id="close-text">Сайт закрывается...</p>
+                        <button id="btn-text" onclick="closeSite()" class="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg">Закрыть
                             сайт
                         </button>
-                        <button onclick="hideModal('goodbyeModal')"
-                            class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg">Закрыть
+                        <button id="return-text" onclick="hideModal('goodbyeModal')"
+                            class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg">Вернуться
                         </button>
                     </div>
                 </div>
@@ -112,13 +112,13 @@
                 <!-- Модальное окно с контактами -->
                 <div id="contactModal"
                     class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                    <div class="bg-white p-8 rounded-lg shadow-lg">
-                        <h2 class="text-xl font-bold mb-4">Мои контакты</h2>
+                    <div class="bg-white p-8 rounded-lg shadow-lg text-black">
+                        <h2 id="mycontact-text" class="text-xl font-bold mb-4">Мои контакты</h2>
                         <ul>
-                            <li>Email: example@example.com</li>
-                            <li>Телефон: +1234567890</li>
+                            <li>Email: ahmedalisherj@gmail.com</li>
+                            <li id="telefon-text">Телефон: +998333606028</li>
                         </ul>
-                        <button onclick="hideModal('contactModal')"
+                        <button id="btnclose-text" onclick="hideModal('contactModal')"
                             class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg">Закрыть
                         </button>
                     </div>
