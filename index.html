@@ -43,7 +43,8 @@
 
         <!-- Основной контент -->
         <main class="flex-1 p-6">
-            <div class="flex justify-center space-x-4" style="background-image: url('https://jlexaii.github.io/MyBlog/images/obloko.png');">
+            <div class="flex justify-center space-x-4"
+                style="background-image: url('https://jlexaii.github.io/MyBlog/images/obloko.png');">
                 <div class="mb-8 flex justify-center">
                     <div class="relative inline-block w-36 h-36 overflow-hidden">
                         <div class=""><img src="https://jlexaii.github.io/MyBlog/images/nout.png" alt="Uzor"
@@ -73,13 +74,52 @@
                     </div>
                 </div>
 
-                <button class="w-24 h-24 bg-white border-2 border-green-500 rounded-full flex items-center justify-center shadow-[inset_5px_5px_10px_rgba(0,0,0,0.3),_5px_5px_15px_rgba(0,0,0,0.5)] transform transition-transform duration-300 hover:scale-105 hover:shadow-[inset_3px_3px_7px_rgba(0,0,0,0.3),_8px_8px_20px_rgba(0,0,0,0.7)]">
-                    <img src="https://jlexaii.github.io/MyBlog/images/button.png" alt="Button Image" class="w-2/3 h-2/3">
-                </button>
-                <button class="w-24 h-24 bg-white border-2 border-green-500 rounded-full flex items-center justify-center shadow-[inset_5px_5px_10px_rgba(0,0,0,0.3),_5px_5px_15px_rgba(0,0,0,0.5)] transform transition-transform duration-300 hover:scale-105 hover:shadow-[inset_3px_3px_7px_rgba(0,0,0,0.3),_8px_8px_20px_rgba(0,0,0,0.7)]">
-                    <img src="https://jlexaii.github.io/MyBlog/images/call.png" alt="Button Image" class="w-2/3 h-2/3">
-                </button>
-                
+                <!-- Кнопки -->
+                <div class="flex space-x-4">
+                    <!-- Первая кнопка -->
+                    <button onclick="showModal('goodbyeModal')"
+                        class="w-24 h-24 bg-white border-2 border-green-500 rounded-full flex items-center justify-center shadow-[inset_5px_5px_10px_rgba(0,0,0,0.3),_5px_5px_15px_rgba(0,0,0,0.5)] transform transition-transform duration-300 hover:scale-105 hover:shadow-[inset_3px_3px_7px_rgba(0,0,0,0.3),_8px_8px_20px_rgba(0,0,0,0.7)]">
+                        <img src="https://jlexaii.github.io/MyBlog/images/button.png" alt="Button Image"
+                            class="w-2/3 h-2/3">
+                    </button>
+
+                    <!-- Вторая кнопка -->
+                    <button onclick="showModal('contactModal')"
+                        class="w-24 h-24 bg-white border-2 border-green-500 rounded-full flex items-center justify-center shadow-[inset_5px_5px_10px_rgba(0,0,0,0.3),_5px_5px_15px_rgba(0,0,0,0.5)] transform transition-transform duration-300 hover:scale-105 hover:shadow-[inset_3px_3px_7px_rgba(0,0,0,0.3),_8px_8px_20px_rgba(0,0,0,0.7)]">
+                        <img src="https://jlexaii.github.io/MyBlog/images/call.png" alt="Button Image"
+                            class="w-2/3 h-2/3">
+                    </button>
+                </div>
+
+                <!-- Модальные окна -->
+                <!-- Модальное окно с Прощанием -->
+                <div id="goodbyeModal"
+                    class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                    <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                        <h2 class="text-xl font-bold mb-4">Прощай!</h2>
+                        <img src="https://jlexaii.github.io/MyBlog/images/goodbye.png" alt="Goodbye Image"
+                            class="w-full mb-4">
+                        <p>Сайт закрывается...</p>
+                        <button onclick="closeSite()" class="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg">Закрыть
+                            сайт</button>
+                    </div>
+                </div>
+
+                <!-- Модальное окно с контактами -->
+                <div id="contactModal"
+                    class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h2 class="text-xl font-bold mb-4">Мои контакты</h2>
+                        <ul>
+                            <li>Email: example@example.com</li>
+                            <li>Телефон: +1234567890</li>
+                        </ul>
+                        <button onclick="hideModal('contactModal')"
+                            class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg">Закрыть</button>
+                    </div>
+                </div>
+
+
             </div>
             <!-- Секция "Обо мне" -->
             <section id="about"

@@ -192,3 +192,20 @@ document.addEventListener("DOMContentLoaded", function () {
         submitted = true; // Устанавливаем флаг при отправке формы
     });
 });
+
+
+// Скрипт для моадльного  окна
+// Функция для показа модального окна
+function showModal(modalId) {
+    document.getElementById(modalId).classList.remove('hidden');
+}
+
+// Функция для скрытия модального окна
+function hideModal(modalId) {
+    document.getElementById(modalId).classList.add('hidden');
+}
+
+// Функция для закрытия сайта
+function closeSite() {
+    window.close(); // Закрывает текущее окно браузера
+}
